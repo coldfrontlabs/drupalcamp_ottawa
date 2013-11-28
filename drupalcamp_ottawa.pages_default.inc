@@ -100,7 +100,21 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->type = 'views_panes';
     $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'default' => 'default',
+              'en' => 'en',
+              'fr' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'arguments' => array(
         'field_sponsor_sponsorship_level_tid' => 'Title',
@@ -121,19 +135,30 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right_above';
-    $pane->type = 'node';
-    $pane->subtype = 'node';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'fr' => 'fr',
+              'default' => 0,
+              'en' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
-      'nid' => '7',
-      'links' => 0,
-      'leave_node_title' => 0,
-      'identifier' => '',
-      'build_mode' => 'full',
-      'link_node_title' => 0,
-      'override_title' => 0,
-      'override_title_text' => '',
+      'arguments' => array(
+        'field_sponsor_sponsorship_level_tid' => 'Title',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Devenez commanditaire',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -147,6 +172,33 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $display->panels['right_above'][1] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
+    $pane->panel = 'right_above';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'nid' => '11',
+      'links' => 1,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'full',
+      'link_node_title' => 0,
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['right_above'][2] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'top';
     $pane->type = 'node';
     $pane->subtype = 'node';
@@ -173,21 +225,24 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['top'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['top'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'top';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Featured Text',
-      'title' => '',
-      'body' => '<h2 class="feature-text">Celebrating, coding and speaking about all things Drupal in our nation\'s capital.</h2>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'nid' => '8',
+      'links' => 1,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'full',
+      'link_node_title' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -197,8 +252,8 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['top'][1] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['top'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -270,12 +325,26 @@ function drupalcamp_ottawa_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'default' => 'default',
+              'en' => 'en',
+              'fr' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'arguments' => array(
         'field_sponsor_sponsorship_level_tid' => 'Title',
@@ -294,42 +363,68 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['top'][0] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'top';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'arguments' => array(
-        'field_sponsor_sponsorship_level_tid' => 'Platinum',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Platinum Sponsors',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'platinum',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['top'][1] = 'new-7';
+    $display->panels['top'][0] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'fr' => 'fr',
+              'default' => 0,
+              'en' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_sponsor_sponsorship_level_tid' => 'Title',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Commanditaire en titre',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['top'][1] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'top';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'default' => 'default',
+              'en' => 'en',
+              'fr' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'arguments' => array(
         'field_sponsor_sponsorship_level_tid' => 'Gold',
@@ -348,15 +443,70 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['top'][2] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['top'][2] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'fr' => 'fr',
+              'default' => 0,
+              'en' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_sponsor_sponsorship_level_tid' => 'Gold',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Commanditaire or',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'gold',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['top'][3] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'top';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'default' => 'default',
+              'en' => 'en',
+              'fr' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'arguments' => array(
         'field_sponsor_sponsorship_level_tid' => 'Silver',
@@ -373,17 +523,72 @@ function drupalcamp_ottawa_default_page_manager_pages() {
       'css_class' => 'silver',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['top'][3] = 'new-9';
+    $display->content['new-11'] = $pane;
+    $display->panels['top'][4] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-12';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'fr' => 'fr',
+              'default' => 0,
+              'en' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_sponsor_sponsorship_level_tid' => 'Silver',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Commanditaire argent',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'silver',
+    );
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['top'][5] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'top';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'default' => 'default',
+              'en' => 'en',
+              'fr' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'arguments' => array(
         'field_sponsor_sponsorship_level_tid' => 'Bronze',
@@ -400,20 +605,61 @@ function drupalcamp_ottawa_default_page_manager_pages() {
       'css_class' => 'bronze',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['top'][4] = 'new-10';
+    $display->content['new-13'] = $pane;
+    $display->panels['top'][6] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-14';
+    $pane->panel = 'top';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'drupalcamp_sponsor_title-drupalcamp_sponsors';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'fr' => 'fr',
+              'default' => 0,
+              'en' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_sponsor_sponsorship_level_tid' => 'Bronze',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Commanditaire bronze',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'bronze',
+    );
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['top'][7] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
     $pane->panel = 'top';
     $pane->type = 'node';
     $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'nid' => '13',
-      'links' => 0,
+      'nid' => '12',
+      'links' => 1,
       'leave_node_title' => 0,
       'identifier' => '',
       'build_mode' => 'full',
@@ -430,10 +676,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
       'css_class' => 'become-a-sponsor',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 8;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['top'][5] = 'new-11';
+    $display->content['new-15'] = $pane;
+    $display->panels['top'][8] = 'new-15';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
