@@ -15,26 +15,26 @@ function drupalcamp_ottawa_locale_default_languages() {
     'language' => 'en',
     'name' => 'En',
     'native' => 'En',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '0',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
     'formula' => '',
     'domain' => '',
     'prefix' => 'en',
-    'weight' => '0',
+    'weight' => 0,
   );
   // Exported language: fr.
   $languages['fr'] = array(
     'language' => 'fr',
     'name' => 'Fr',
     'native' => 'Fr',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '0',
-    'formula' => '',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 2,
+    'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => '0',
+    'weight' => 0,
   );
   return $languages;
 }

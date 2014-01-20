@@ -10,47 +10,6 @@
 function drupalcamp_ottawa_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
-  $field_bases['body'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(
-      0 => 'node',
-    ),
-    'field_name' => 'body',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'field_permissions' => array(
-        'create' => 'create',
-        'edit' => 0,
-        'edit own' => 'edit own',
-        'view' => 'view',
-        'view own' => 0,
-      ),
-    ),
-    'translatable' => 1,
-    'type' => 'text_with_summary',
-  );
-
   // Exported field_base: 'field_image'
   $field_bases['field_image'] = array(
     'active' => 1,
@@ -58,6 +17,9 @@ function drupalcamp_ottawa_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_image',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -84,57 +46,34 @@ function drupalcamp_ottawa_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'og_group_ref'
-  $field_bases['og_group_ref'] = array(
+  // Exported field_base: 'title_field'
+  $field_bases['title_field'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'og_group_ref',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
+    'field_name' => 'title_field',
     'foreign keys' => array(
-      'node' => array(
+      'format' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'format' => 'format',
         ),
-        'table' => 'node',
+        'table' => 'filter_format',
       ),
     ),
     'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
+      'format' => array(
+        0 => 'format',
       ),
     ),
     'locked' => 0,
-    'module' => 'entityreference',
+    'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'handler' => 'og',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'og_behavior' => array(
-            'status' => TRUE,
-          ),
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'membership_type' => 'og_membership_type_default',
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'event' => 'event',
-        ),
-      ),
-      'handler_submit' => 'Change handler',
-      'target_type' => 'node',
+      'max_length' => 255,
     ),
-    'target_type' => 'node',
-    'translatable' => 0,
-    'type' => 'entityreference',
+    'translatable' => 1,
+    'type' => 'text',
   );
 
   return $field_bases;

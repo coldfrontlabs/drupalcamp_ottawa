@@ -16,7 +16,7 @@ function drupalcamp_ottawa_menu_default_menu_custom() {
     'title' => 'Footer Menu',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => '0',
+    'i18n_mode' => 0,
   );
   // Translatables
   // Included for use with string extractors like potx.
