@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DrupalCamp Ottawa feature.
  */
+
+include_once 'drupalcamp_ottawa.features.inc';
