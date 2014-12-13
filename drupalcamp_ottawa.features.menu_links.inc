@@ -17,16 +17,15 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'user/register',
     'link_title' => 'Register',
     'options' => array(
-      'options' => array(
-        'alter' => TRUE,
-        'attributes' => array(
-          'style' => 'user-register button',
-        ),
-        'item_attributes' => array(
-          'id' => '',
-          'class' => '',
-          'style' => '',
-        ),
+      'alter' => TRUE,
+      'attributes' => array(
+        'style' => 'user-register button',
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
       'identifier' => 'user-menu_register:user/register',
     ),
     'module' => 'system',
