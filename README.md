@@ -1,4 +1,6 @@
-drupalcamp_ottawa
+DrupalCamp Ottawa
 =================
 
-Configuration export for DrupalCamp Ottawa 2014
+Configuration export for DrupalCamp Ottawa website
+
+http://drupalcampottawa.com
