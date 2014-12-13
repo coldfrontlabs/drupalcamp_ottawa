@@ -5,3 +5,16 @@
  */
 
 include_once 'drupalcamp_ottawa.features.inc';
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drupalcamp_ottawa_menu_alter(&$items) {
+
+  // Example - disable the page at node/add
+  $items['user/register']['title'] = 'Register';
+  $items['user/register']['menu_name'] = 'user-menu';
+  $items['user/register']['weight'] = -50;
+  $items['user/register']['type'] = MENU_NORMAL_ITEM;
+}
+
