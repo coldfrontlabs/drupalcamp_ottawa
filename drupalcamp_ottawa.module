@@ -18,3 +18,16 @@ function drupalcamp_ottawa_menu_alter(&$items) {
   $items['user/register']['type'] = MENU_NORMAL_ITEM;
 }
 
+/**
+ * Implements hook_menu().
+ */
+function drupalcamp_ottawa_menu() {
+  $items['user/login'] = array(
+    'title' => 'Log in',
+    'access callback' => 'user_is_anonymous',
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'user-menu',
+  );
+
+  return $items;
+}
