@@ -285,10 +285,17 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Drupal.org',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-social-menu_drupalorg:https://groups.drupal.org/ottawa',
+      'attributes' => array(
+        'class' => array(
+          0 => 'drupal',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -305,10 +312,17 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Facebook',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-social-menu_facebook:https://www.facebook.com/DrupalCampOttawa',
+      'attributes' => array(
+        'class' => array(
+          0 => 'facebook',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -325,10 +339,17 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Twitter',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-social-menu_twitter:https://twitter.com/drupalcampott',
+      'attributes' => array(
+        'class' => array(
+          0 => 'twitter',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,

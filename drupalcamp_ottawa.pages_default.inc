@@ -77,12 +77,12 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'What\'s a DrupalCamp?',
       'title' => '',
-      'body' => '<img src="http://placehold.it/150x150" />
-
+      'body' => '<img alt="Question Marks" src="/sites/all/themes/drupalcampy/images/dc-questionmarks.png" />
+<div class="about-content">
 <h3>What\'s a DrupalCamp?</h3>
 
 <p>DrupalCamp is an event for anyone using Drupal, or responsible for designing, building, developing, and supporting Drupal in any capacity. It’s a place where designers, developers, and Drupal users can brush shoulders with Drupal service providers, hosting vendors, and other members of the broader open-source community to discuss and learn about Drupal. It’s a great opportunity to meet with the community, exchange ideas, network and socialize!</p>
-',
+</div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -107,12 +107,12 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'What\'s Drupal',
       'title' => '',
-      'body' => '<p><img src="http://placehold.it/150x150" /></p>
-
+      'body' => '<img alt="Speech Bubbles" src="/sites/all/themes/drupalcampy/images/dc-whatis.png" />
+<div class="about-content">
 <h3>What\'s Drupal?</h3>
 
 <p>Drupal is a free, open-source web development platform for online content and user communities. Drupal powers some of the busiest sites on the web and can be adapted virtually to any visual design. It runs over a million sites, including WhiteHouse.gov, Twitter.com, World Economic Forum, buyandsell.gc.ca, etc.</p>
-',
+</div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -137,8 +137,8 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'DrupalCamp Ottawa’s Facts and Figures',
       'title' => '',
-      'body' => '<img src="http://placehold.it/150x150" />
-
+      'body' => '<img alt="Clipboard" src="/sites/all/themes/drupalcampy/images/dc-clipboard.png" />
+<div class="about-content">
 <h3>DrupalCamp Ottawa’s Facts and Figures</h3>
 
 <ul>
@@ -172,7 +172,8 @@ function drupalcamp_ottawa_default_page_manager_pages() {
 </ul>
 
 <p>The first DrupalCamp Ottawa, which took place in 2013 was a sellout event that surprised organizers and highlighted the level of Drupal interest in the National Capital Region. Since the event is run by volunteers with the financial support of companies that offer Drupal-related services, the camp is able to offer a high quality event for a very modest fee.</p>
-',
+
+</div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -274,7 +275,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'contact-form',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -291,8 +295,11 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Google Map',
       'title' => '',
-      'body' => '<p>DrupalCamp Ottawa will be held at The University of Ottawa,<br> 75 Laurier Ave E,<br> ON K1N 6N5</p>
-<p><iframe frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44810.93251782685!2d-75.70952593670654!3d45.41572591808842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x188a59c3622fdbae!2sUniversity+of+Ottawa!5e0!3m2!1sen!2sca!4v1430339882943" style="border:0" width="600"></iframe></p>',
+      'body' => '<div id="custom-map"><a href=""> Social Sciences building, University of Ottawa<br />
+Building code: FSS<br />
+120 University Private<br />
+Ottawa, ON K1N 6N5 </a></div>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -300,7 +307,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'map',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -341,7 +351,7 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'responsive',
+    'body_classes_to_add' => 'responsive full-width',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -377,49 +387,50 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Featured Items',
       'title' => '',
-      'body' => '<div class="dark-box"></div>
+      'body' => '  <div class="dark-box"></div>
 <div class="content"> 
     <ul class="caption-style">
       <li> 
-        <a href="#" class="container-profile-dark">
+        <a href="/about" class="container-profile-dark">
           <div class="inner-content">
-             <img src="http://images.fineartamerica.com/images-medium/why-so-glum-square-dog-photography.jpg" alt="">
+             <img src="/sites/all/themes/drupalcampy/images/feature-1.jpg" alt="Secret Silouette">
              <div class="caption-bg">
                <div class="caption-text">
-                 <h4>Amazing <strong>Caption</strong></h4>
+                 <h4>Learn<strong> More</strong></h4>
               </div>
             </div>
-            <h2>Mr Puppy</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+            <h2>Keynote Speaker</h2>
+            <p>Want to know who the keynote speaker of DrupalCamp 2015 is? Check back at the end of May to find out who it is! We promise you won\'t be dissapointed! </p>
+   <!--          <p>Addison Beery (add1sun) has been involved with Drupal since 2006. She is Lullabot\'s Director of Education and the Product Manager for Drupalize.Me, the Drupal video training site.</p>
+ -->          </div>
         </a>
       </li>
       
       <li> 
-        <a href="#" class="container-profile-dark">
+        <a href="/user/register" class="container-profile-dark">
           <div class="inner-content">
-             <img src="http://core0.staticworld.net/images/article/2013/11/lil-bub-3-copyright-mike-bridavsky-100067104-orig.jpg" alt="">
+             <img src="/sites/all/themes/drupalcampy/images/feature-2.jpg" alt="People attending DrupalCamp">
              <div class="caption-bg">
                <div class="caption-text">
-                 <h4>Amazing <strong>Cat!</strong></h4>
+                 <h4>Read<strong> More</strong></h4>
               </div>
             </div>
-            <h2>Lil Bub</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>DrupalCamp is FREE</h2>
+            <p>We are glad to be offering DrupalCamp tickets for free this year! Special thanks to all our sponsors who make a free event possible. Don\'t forget to register soon!</p>
           </div>
         </a>
       </li>
       <li> 
-        <a href="#" class="container-profile-dark">
+        <a href="/drupalcamp-ottawa-2015/sponsors" class="container-profile-dark">
           <div class="inner-content">
-             <img src="http://loe.org/content/2013-03-29/20130322-085443-2.jpg" alt="">
+             <img src="/sites/all/themes/drupalcampy/images/feature-3.jpg" alt="Sponsors at DrupalCamp">
              <div class="caption-bg">
                <div class="caption-text">
-                 <h4>Amazing <strong>Caption</strong></h4>
+                 <h4>View <strong> Sponsors</strong></h4>
               </div>
             </div>
-            <h2>Great White</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>Become a Sponsor</h2>
+            <p>We are still looking for sponsors. Feel free to check out our sponsorship packages to find out the perks of being an official sponsor of DrupalCamp Ottawa 2015!</p>
           </div>
         </a>
       </li>
@@ -432,7 +443,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'full-width-wrapper',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -448,11 +462,13 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Submit a Session',
-      'title' => 'Submit a Session',
-      'body' => '<h2>Want to speak at DrupalCamp Ottawa 2015?</h2>
+      'title' => '',
+      'body' => '<div class="pattern-reversed">
+<h2>Submit a Session</h2>
+<h3>Want to speak at DrupalCamp Ottawa 2015?</h3>
 
-<a class="button window-btn" href="#">Submit A Session →</a>
-',
+<p><a class="button window-btn" href="#">Submit A Session →</a></p>
+</div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -462,7 +478,7 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'submit-a-session',
+      'css_class' => 'submit-a-session banner__secondary',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -480,8 +496,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Get Involved',
       'title' => 'Get Involved',
-      'body' => '<h2>Sign up to volunteer or join the Ottawa Drupal Association</h2>
-<a class="button window-btn" href="#">Volunteer →</a>',
+      'body' => '<h3>Sign up to volunteer or join the Ottawa Drupal Association</h3>
+
+<p><a class="button window-btn" href="#">Volunteer →</a></p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -491,7 +509,7 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'volunteer',
+      'css_class' => 'volunteer banner__secondary',
     );
     $pane->extras = array();
     $pane->position = 2;
@@ -508,8 +526,15 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Google Map',
-      'title' => 'Google Map',
-      'body' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.3172389220786!2d-75.68313300000001!3d45.42310600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050a6db98d73%3A0x188a59c3622fdbae!2sUniversity+of+Ottawa!5e0!3m2!1sen!2sca!4v1430253240903" width="1200" height="400" frameborder="0" style="border:0"></iframe>',
+      'title' => '',
+      'body' => '<div id="custom-map">
+ <a href="">
+ Social Sciences building, University of Ottawa<br>
+ Building code: FSS<br>
+ 120 University Private<br>
+ Ottawa, ON K1N 6N5 
+ </a>
+</div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -517,7 +542,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'banner__secondary map',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -657,7 +685,8 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'What we do',
       'title' => 'What we do',
-      'body' => '<p>The ODA is a team of highly motivated volunteer that organize events, help and support Ottawa’s Drupal community. Our main goal is to coordinate amazing DrupalCamps in the National Capital every year, but we also support other events and Drupal-related initiatives in Ottawa.</p>
+      'body' => '
+<p>The ODA is a team of highly motivated volunteer that organize events, help and support Ottawa’s Drupal community. Our main goal is to coordinate amazing DrupalCamps in the National Capital every year, but we also support other events and Drupal-related initiatives in Ottawa.</p>
 ',
       'format' => 'full_html',
       'substitute' => TRUE,
@@ -666,7 +695,10 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -708,29 +740,37 @@ function drupalcamp_ottawa_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Members',
-      'title' => '',
-      'body' => '<div class="dark-circle"><img alt="" class="circle" src="http://placehold.it/200x200" />
+      'title' => 'Members',
+      'body' => '<div class="dark-circle"><img alt="" class="circle" src="/sites/all/themes/drupalcampy/images/feature-1.jpg" />
+<div class="about-content">
 <h3>Pat Gilbert, President</h3>
 
 <p>Pat is the Director of Business Development and Sales at OPIN Software, and has been involved in the Drupal community for the past 4 years.</p>
 </div>
+</div>
 
-<div class="light-circle"><img alt="" class="circle" src="http://placehold.it/200x200" />
+<div class="light-circle"><img alt="" class="circle" src="/sites/all/themes/drupalcampy/images/feature-1.jpg" />
+<div class="about-content">
 <h3>Claire-Isabelle Carlier, Vice-President</h3>
 
 <p>Claire is Business Development and Marketing Manager at OpenConcept Consulting. She joined the Drupal community (and Canada!) over a year ago and has background in UX and content strategy.</p>
 </div>
+</div>
 
-<div class="dark-circle"><img alt="" class="circle" src="http://placehold.it/200x200" />
+<div class="dark-circle"><img alt="" class="circle" src="/sites/all/themes/drupalcampy/images/feature-1.jpg" />
+<div class="about-content">
 <h3>Mathew Winstone, Secretary</h3>
 
 <p>Mathew is CEO and Co-Founder of Coldfront Labs. He has been working with Drupal since 2005 and has a great interest in responsive web development and bringing powerful applications to the browser using HTML5 and Drupal. [Link to d.org profile?]</p>
 </div>
+</div>
 
-<div class="light-circle"><img alt="" class="circle" src="http://placehold.it/200x200" />
+<div class="light-circle"><img alt="" class="circle" src="/sites/all/themes/drupalcampy/images/feature-1.jpg" />
+<div class="about-content">
 <h3>John Downing, Treasurer</h3>
 
 <p>John is the President of TrainingCity and has been providing IT Training and Consulting for the past 18 years. He has been very active in the Drupal community for many years and joined ODA last year.</p>
+</div>
 </div>',
       'format' => 'full_html',
       'substitute' => TRUE,
