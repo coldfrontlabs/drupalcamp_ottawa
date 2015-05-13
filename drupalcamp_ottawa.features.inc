@@ -26,9 +26,30 @@ function drupalcamp_ottawa_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_ds_field_settings_info_alter().
+ */
+function drupalcamp_ottawa_ds_field_settings_info_alter(&$data) {
+  if (isset($data['node|news|teaser'])) {
+    $data['node|news|teaser']->settings['title']['formatter_settings'] = array(
+      'link' => 1,
+      'wrapper' => 'h2',
+      'class' => '',
+    ); /* WAS: '' */
+  }
+}
+
+/**
  * Implements hook_field_default_field_bases_alter().
  */
 function drupalcamp_ottawa_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_news_image'])) {
+    $data['field_news_image']['settings']['entity_translation_sync'] = array(
+      0 => 'fid',
+    ); /* WAS: '' */
+  }
+  if (isset($data['field_news_tags'])) {
+    $data['field_news_tags']['settings']['entity_translation_sync'] = FALSE; /* WAS: '' */
+  }
   if (isset($data['field_sponsor_body'])) {
     $data['field_sponsor_body']['settings']['entity_translation_sync'] = FALSE; /* WAS: '' */
     $data['field_sponsor_body']['translatable'] = 1; /* WAS: 0 */
@@ -53,6 +74,24 @@ function drupalcamp_ottawa_field_default_field_bases_alter(&$data) {
  * Implements hook_field_default_field_instances_alter().
  */
 function drupalcamp_ottawa_field_default_field_instances_alter(&$data) {
+  if (isset($data['node-news-body'])) {
+    $data['node-news-body']['display']['default']['weight'] = 2; /* WAS: 0 */
+    $data['node-news-body']['display']['teaser']['weight'] = 2; /* WAS: 0 */
+    $data['node-news-body']['settings']['entity_translation_sync'] = FALSE; /* WAS: '' */
+  }
+  if (isset($data['node-news-field_news_tags'])) {
+    unset($data['node-news-field_news_tags']);
+  }
+  if (isset($data['node-news-og_group_ref'])) {
+    $data['node-news-og_group_ref']['display']['default']['type'] = 'hidden'; /* WAS: 'og_list_default' */
+    $data['node-news-og_group_ref']['display']['default']['weight'] = 10; /* WAS: 1 */
+    $data['node-news-og_group_ref']['display']['teaser']['weight'] = 8; /* WAS: 0 */
+    $data['node-news-og_group_ref']['settings']['entity_translation_sync'] = FALSE; /* WAS: '' */
+    unset($data['node-news-og_group_ref']['display']['default']['module']);
+  }
+  if (isset($data['node-session-field_news_image'])) {
+    $data['node-session-field_news_image']['settings']['entity_translation_sync'] = FALSE; /* WAS: '' */
+  }
   if (isset($data['node-sponsor-field_sponsor_body'])) {
     $data['node-sponsor-field_sponsor_body']['settings']['entity_translation_sync'] = FALSE; /* WAS: '' */
     $data['node-sponsor-field_sponsor_body']['widget']['weight'] = 2; /* WAS: 1 */
@@ -109,6 +148,44 @@ function drupalcamp_ottawa_user_default_permissions_alter(&$data) {
   }
   if (isset($data['view sponsors'])) {
     $data['view sponsors']['roles']['anonymous user'] = 'anonymous user'; /* WAS: '' */
+  }
+}
+
+/**
+ * Implements hook_strongarm_alter().
+ */
+function drupalcamp_ottawa_strongarm_alter(&$data) {
+  if (isset($data['field_bundle_settings_node__news'])) {
+    $data['field_bundle_settings_node__news']->value['view_modes']['diff_standard'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['full'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['listing'] = array(
+      'custom_settings' => TRUE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['revision'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['rss'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['search_index'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['search_result'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['teaser'] = array(
+      'custom_settings' => TRUE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__news']->value['view_modes']['token'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+  }
+  if (isset($data['node_options_news'])) {
+    unset($data['node_options_news']->value[2]);
   }
 }
 
