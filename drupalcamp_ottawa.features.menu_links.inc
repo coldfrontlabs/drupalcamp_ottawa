@@ -105,9 +105,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'node/%/program/sessions',
     'link_title' => 'Sessions',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'main-menu_sessions:node/2/program/sessions',
     ),
     'module' => 'menu',
@@ -125,9 +123,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'node/%/sponsors',
     'link_title' => 'Sponsors',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'main-menu_sponsors:node/2/sponsors',
     ),
     'module' => 'menu',
@@ -145,9 +141,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'about',
     'link_title' => 'About',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_about:about',
     ),
     'module' => 'menu',
@@ -165,9 +159,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'contact',
     'link_title' => 'Contact',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_contact:contact',
     ),
     'module' => 'menu',
@@ -185,9 +177,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'user',
     'link_title' => 'Login',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_login:user',
     ),
     'module' => 'menu',
@@ -205,9 +195,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'news',
     'link_title' => 'News',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_news:news',
     ),
     'module' => 'menu',
@@ -225,9 +213,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'ottawa-drupal-association',
     'link_title' => 'Ottawa Drupal Association',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_ottawa-drupal-association:ottawa-drupal-association',
     ),
     'module' => 'menu',
@@ -245,9 +231,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'node/%/program/sessions',
     'link_title' => 'Sessions',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_sessions:node/2/program/sessions',
     ),
     'module' => 'menu',
@@ -265,9 +249,7 @@ function drupalcamp_ottawa_menu_default_menu_links() {
     'router_path' => 'node/%/sponsors',
     'link_title' => 'Sponsors',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-footer-menu_sponsors:node/2/sponsors',
     ),
     'module' => 'menu',
